@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Video store product page</title>
+        <style>
+
+			*{
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+          		font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+				margin: 0 auto;
+          		/*width: 1320px;*/
+				background: hsl;
+			}
+
+			header {
+          		align-items: center;
+          		display: flex;
+          		margin-bottom: px;
+				border-radius: 5px;
+				background:hsl(70, 10%, 90%);
+   			}
+			
+			header img{
+				width: 200px;
+				height: 200px;
+				border-right: 1px black solid ;
+			}
+			@media (min-width: 480px) {
+    		nav ul {
+        		display: flex;
+    		}
+    		nav li {
+        		flex: 1 1 auto;
+    		}
+			}
+
+			@media only screen and (min-width: 768px) {
+    		nav a {
+        		font-size: 20px;
+    		}
+			}
+
+			nav {
+          		margin-left: 0px;
+   			}
+			
+			a{
+				padding: 0;
+			}
+
+			form{
+				margin-left: 40px;
+			}
+
+			/*.product-cards button{
+				background:none;
+				border-radius: 20px;
+				margin: 40% 0 30% 120%;
+				color: black;
+				border: 1px solid black;
+			}*/
+
+
+			nav
+			ul	{
+				list-style: none;
+			}
+
+			nav
+			a 	{
+				color: black;
+				display: block;
+				padding: 15px;
+				font-weight: bold;
+				text-decoration: none;
+				font-size: 15px;
+				text-align: center;
+				
+			}
+
+			nav
+			a:hover	{
+				color: rgb(16, 151, 16);
+				font-size:1em;
+				background:;
+			}
+
+			li#partner{
+				background: hsl(0, 6%, 61%);
+				margin-left: 20px;
+				font-size: 15px;
+				border-radius: 5px;
+			}
+
+			li#partner
+			a:hover{
+				background: white;
+				border: none;
+				border-radius: 5px;
+			}
+
+			#hour,
+			#call{
+				margin-right: 50px;
+			}
+
+    		.product-cards {
+          		/*display: grid;
+          		grid-template-columns: auto auto auto;*/
+	  			/*margin-bottom: 30px;*/
+				border: px solid green;
+				/*justify-content: center;*/
+  			}
+
+			.details{
+            	/*border:;*/
+            	margin: 10px 0 10px 40px;
+            	width: 380px;
+            	height: 420px;
+            	display: inline-block;
+        	}
+
+        	.details img{
+            	width: 100%;
+            	height: 60%;
+            	border-bottom: 2px green solid;
+        	}
+
+			button.dispatch{
+				margin-left: 380px;
+				background: rgb(10, 134, 10);
+				border: 0;
+				color: white;
+				width: 500px;
+				height: 50px;
+				padding: 10px;
+				text-transform: uppercase;
+				position: relative;
+				border-radius: 5px;
+				font-size: 18px;
+				border: 1px solid blue;
+				margin-bottom: 80px;
+			}
+		
+
+			input,
+			select {
+				border: 1px solid grey;
+				padding: 10px;
+				width: 500px;
+			}
+
+			#itemtrack{
+				margin: 30px 0 20px 220px;
+				
+			}
+
+			#itemtrack button{
+				background: rgb(10, 134, 10);
+				border: 0;
+				color: white;
+				width: 200px;
+				height: 50px;
+				padding: 10px;
+				text-transform: uppercase;
+				position: relative;
+				border-radius: 5px;
+				font-size: 17px;
+			}
+
+			.breadcrumb {
+    			display:inline-flex;
+    			list-style: none;
+				margin: 5px 0 0 600px;
+  			}
+
+			.breadcrumb li {
+    			padding: 5px;
+				font-weight: bold;
+			}
+			  
+			.breadcrumb
+			#promo{
+				text-transform: uppercase;
+			}
+
+			.breadcrumb
+			#promo
+			a{
+				color: limegreen;
+				font-size: 20px;
+			}
+
+			.breadcrumb
+			#promo
+			a:hover{
+				font-size: 30px;
+				text-decoration: none;
+			}
+
+  			.breadcrumb li:after {
+    			/*content: '||';*/
+    			margin-left: 10px;
+  			}
+
+  			.breadcrumb li:last-child:after {
+    			content: '';
+ 			}
+
+			.breadcrumb a {
+    			color: black;
+    			text-decoration: none;
+  			}
+
+  			.breadcrumb a:hover {
+    			text-decoration: underline;
+			}
+
+			.intro{
+				margin: 30px 0;
+				padding-left: 10px;
+				width: 50%;
+			}
+
+			.intro h1{
+				margin-bottom: 15px;
+			}
+
+			.intro
+			h1
+			span{
+				color: rgb(10, 134, 10) ;
+			}
+
+			.intro p{
+				line-height: 1.5;
+			}
+
+			/* Customize the label (the container) */
+		.container {
+  				display: inline-block;
+  				position: relative;
+  				padding-left: 35px;
+  				margin-bottom: 10px;
+  				cursor: pointer;
+  				font-size: 22px;
+  				-webkit-user-select: none;
+  				-moz-user-select: none;
+  				-ms-user-select: none;
+				user-select: none;
+			}
+
+	/* Hide the browser's default radio button */
+		.container input {
+  				position: absolute;
+  				opacity: 0;
+  				cursor: pointer;
+  				height: 0;
+				width: 0;
+			}
+
+	/* Create a custom radio button */
+		.checkmark {
+  				position: absolute;
+  				top: 0;
+  				left: 0;
+  				height: 25px;
+  				width: 25px;
+  				background-color: #eee;
+				border: 1.5px solid rgb(35, 128, 7);  
+			}
+
+	/* On mouse-over, add a grey background color */
+		.container:hover input ~ .checkmark {
+  				background-color: rgb(250, 249, 249);
+			}
+
+	/* When the radio button is checked, add a blue background */
+		.container input:checked ~ .checkmark {
+  				background-color: rgb(47, 243, 73);
+			}
+
+	/* Create the indicator (the dot/circle - hidden when not checked) */
+		.checkmark:after {
+  				content: "";
+  				position: absolute;
+  				display: none;
+			}
+
+	/* Show the indicator (dot/circle) when checked */
+		.container input:checked ~ .checkmark:after {
+  				display: block;
+			}
+
+	/* Style the indicator (dot/circle) */
+		.container .checkmark:after {
+			left: 9px;
+  			top: 5px;
+  			width: 5px;
+  			height: 10px;
+  			border: solid white;
+  			border-width: 0 3px 3px 0;
+  			-webkit-transform: rotate(45deg);
+  			-ms-transform: rotate(45deg);
+  			transform: rotate(45deg);
+			}
+
+			/*.product-card{
+				display: inline-block;
+				border: 1px solid black;
+				padding: px;
+				margin-left: 20px;
+				width: 320px;
+			}
+
+			.product-card img {
+				width: 320px;
+				border: ;
+				height: ;
+			}
+			
+			.product-card h3 {
+				margin: 30px 0 15px;
+			}
+
+			.product-card a {
+				color: black;
+				text-decoration: none;
+			}
+
+			.product-card p{
+				line-height: 1.5;
+			}
+
+
+			.current span{
+				font-weight: bold;
+				text-decoration: underline;
+			}
+
+			#less {
+				padding-top: 25px;
+			}*/
+
+			fieldset{
+				border: 0;
+				padding: 0;
+			}
+
+			fieldset > div{
+				margin-bottom: 30px;
+			}
+
+			label{
+				display: block;
+				margin-bottom: 10px;
+			}
+
+			label span {
+				color: red;
+			}
+
+			select {
+				background: transparent;
+				border-radius: 0;
+				box-shadow: 5px;
+				color: #666;
+				-webkit-appearance: none;
+				width: 100%;
+				font-size: 16px;
+			}
+
+			.select-wrapper {
+  				position: relative;
+  				width: 222px;
+				margin-bottom: 0;
+			}
+
+			.select-wrapper:after {
+  				content: ' < >';
+  				color: #666;
+  				font-size: 18px;
+				font-weight: bold;
+  				top: 12px;
+  				right: 0;
+  				transform: rotate(90deg);
+  				position: absolute;
+  				Z-index: -1;
+			}
+
+			.single-input input{
+				width: 87%;
+			}
+
+			.double-input {
+				display: flex;
+			}
+
+			.double-input > div {
+				margin-right: 15px;
+			}
+
+
+			input:valid
+			 {
+  				border: 2px solid green;
+			}
+
+			input:invalid
+			 {
+  				border: 2px solid hotpink;
+			}
+			.form-heading{
+				margin-bottom: 10px;
+			}
+			
+			@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+			#social {
+  				margin-top: 20px;
+				text-align: center;
+				background: hsl(0, 2%, 22%);
+				padding: 40px 0;
+				width: 100%;
+				height: 500px;
+			}
+
+			.contact{
+				font-size: 15px;
+				text-align: left;
+				margin-left: 30px;
+				margin-top: 20px;
+				color: whitesmoke;
+			}
+
+			.bottom_link{
+				display: block;
+				position: relative;;
+				color: white;
+				text-decoration: none;
+
+			}
+
+			.bottom_link a{
+				color: white;
+			}
+
+			.bottom_link
+			a:hover{
+				border-left: 5px whitesmoke solid;
+			}
+
+			.bottom_menu{
+				font-size: 13px;
+				position: relative;
+				left: 900px;
+				bottom: 150px;
+				width: 300px;
+			}
+
+			.partners{
+				background: hsl(0, 7%, 94%);
+				height: 110px ;
+				padding: 8px 0 0 8px;
+				margin-right: 40px;
+			}
+
+			.partners img{
+				width: 150px;
+				height: 90px;
+				margin-right: 20px;
+			}
+
+			.p_artners{
+				font-size: 18px;
+			}
+
+			.designer{
+				position: relative;
+				top: 10px;
+				right: 10px;
+				text-align: right;
+			}
+
+			.designer
+			span{
+				color: rgb(26, 235, 214);
+				border: 1px solid silver;
+				padding: 3px;
+				font-weight: bold;
+			}
+
+			.designer
+			span:before{
+				content: '::';
+			}
+
+			.smGlobalBtn{ /* global button class */
+    			display: inline-block;
+    			position: relative;
+    			cursor: pointer;
+    			width: 50px;
+    			height: 50px;
+    			box-shadow: 0 2px 2px #999;
+				padding: 0px;
+				margin: 15px;
+    			text-decoration: none;
+    			text-align: center;
+				color: #fff;
+				font-size: 25px;
+				font-weight: normal;
+				line-height: 2em;
+				border-radius: 25px;
+    			-moz-border-radius:25px;
+    			-webkit-border-radius:25px;
+			}
+
+		/* facebook button class*/
+			.facebookBtn{
+    			background: #4060A5;
+			}
+
+			.facebookBtn:before{ /* use :before to add the relevant icons */
+    			font-family: "FontAwesome";
+    			content: "\f09a"; /* add facebook icon */
+			}
+
+			.facebookBtn:hover{
+    			color: #4060A5;
+    			background: #fff;
+			}
+
+		/* twitter button class*/
+			.twitterBtn{
+    			background: #00ABE3;
+			}
+
+			.twitterBtn:before{
+     			font-family: "FontAwesome";
+      			content: "\f099"; /* add twitter icon */
+			}
+
+			.twitterBtn:hover{
+      			color: #00ABE3;
+      			background: #fff;
+			}
+
+		/* Instagram button class*/
+			.instagramBtn{
+    			background: rgb(236, 139, 74);
+			}
+
+			.instagramBtn:before{
+      			font-family: "FontAwesome";
+      			content: "\f16d"; /* add Instagram icon */
+			}
+
+			.instagramBtn:hover{
+     			color: rgb(230, 128, 97);
+      			background: #fff;
+			}
+
+			footer{
+				background: hsl;
+			}
+
+
+
+
+			/*input:valid
+			 {
+  				
+			}
+
+			input:invalid
+			 {
+  				
+			}
+
+	    	header,
+	    	nav,
+	    	section,
+	    	footer {
+	        	background: #659494;
+            	border-radius: 5px;
+   	        	color: white;
+ 	        	font-family: arial, san-serif;
+ 	        	font-size: 25px;
+	        	text-align: center;
+	    	}
+
+	    	footer:before {
+          		content: '<';
+            }
+
+	    	footer:after {
+				content: '>';
+            }
+
+	    	header,
+	    	nav,
+	    	section,
+	    	footer {
+ 	        	border: 1px solid gray;
+     	    	padding: 20px;
+ 	        	margin-bottom: 25px;
+	    	}
+
+	    	.products {
+	        	display: grid;
+	        	grid-template-columns: auto auto auto auto;
+	    	}
+
+	    	.products div {
+	        	border: 2px solid white;
+ 	        	padding: 30px;
+	        	margin: 10px;
+	    	} */
+
+        </style>
+    </head>
+    <body>
+        <!-- your code goes here -->
+            <header>
+				<img src="green_eagle_icon.svg" alt="/green_eagle_icon">
+				<nav>
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Our Services</a></li>
+						<li><a href="#delivery_request">Our Routes & Charges</a></li>
+						<li><a href="#">Contact Us</a></li>
+						<li><a href="#itemtrack">Track Your Items</a></li>
+						<li id="partner"><a href="signUpForm.html" target="_blank">Become a Delivery Partner</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<section>
+				<ol class="breadcrumb">
+					<li id="hour">MON - SAT: 8AM - 6PM</li>
+					<li id="call">CALL: +234-0803-411-9208</li>
+					<li id="promo"><a href=""> Promos! </a></li>
+				</ol>
+			</section>
+
+			<section class="intro">
+				<h1>We Are <span>Green-Eagle</span> Couriers</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					In bibendum non purus quis vestibulum. Pellentesque ultricies quam lacus, 
+					ut tristique sapien tristique et</p>
+			</section>
+
+			 <section class="product-cards">
+			<!--<div class="product-card">
+				<img src="/chapter_1/venom.jpg" alt=""/>
+				<h3><a href="">Domestic Courier Solutions</a></h3>
+				<p class="current">Whether sending within the city or across the country, GIGL is here to serve you. 
+					GIGL offers safe and speedy delivery to your doorstep.<span>N900</span></p>
+			</div>
+
+			<div class="product-card">
+				<img src="/chapter_1/venom.jpg" alt=""/>
+				<h3><a href="">E-Commerce Logistics</a></h3>
+				<p class="current">Whether sending within the city or across the country, GIGL is
+					 here to serve you. 
+					 GIGL offers safe and speedy delivery to your doorstep. <span>N900</span>
+				</p>
+			</div>
+
+			<div class="product-card">
+				<img src="/chapter_1/venom.jpg" alt=""/>
+				<h3><a href="">Palette Symbol</a></h3>
+				<p class="current">Whether sending within the city or across the country, GIGL is here to serve you.
+					GIGL offers safe and speedy delivery to your doorstep. <span>N900</span></p>
+			</div>
+			<button>View More</button>-->
+			<div class="details">
+				<img src="/parcel.jpg" alt="" />
+				<h3>Courier Service</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+					Tempore placeat eos veniam ex vitae incidunt voluptate cupiditate non possimus, 
+					sapiente maiores ab alias deleniti minima neque sint assumenda aut doloremque.
+				</p>
+			</div>
+			<div class="details">
+				<img src="/timelydelivery.png" alt="" />
+				<h3>Service Delivery</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+					Tempore placeat eos veniam ex vitae incidunt voluptate cupiditate non possimus, 
+					sapiente maiores ab alias deleniti minima neque sint assumenda aut doloremque.
+				</p>
+			</div>
+			<div class="details">
+				<img src="/affordable.png" alt="" />
+				<h3>Affordable</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+					Tempore placeat eos veniam ex vitae incidunt voluptate cupiditate non possimus, 
+					sapiente maiores ab alias deleniti minima neque sint assumenda aut doloremque.
+				</p>
+			</div>
+			<div id="itemtrack">
+				<button type="submit">Track Your Item</button>
+				<input type="text" placeholder="Enter Tracking Number" />       
+			</div>
+
+		</section>
+
+
+    	<footer>
+			<h1 id="delivery_request">PLACE DELIVERY REQUEST</h1>
+			<form action="url_to_send_form_data" method="POST">
+				<fieldset>
+					<h2 class="form-heading">Shipping Address</h2>
+					<div class="double-input">
+						<div>
+							<label for="first_name">First Name:<span>*</span></label>
+							<input id="first_name" type="text" name="firstname" required>
+						</div>
+						<div>
+							<label for="last_name">Last Name:<span>*</span></label>
+							<input id="last_name" type="text" name="lasttname" required>
+						</div>
+					</div>
+					<div class="single-input">
+						<div>
+							<label for="address">Address:<span>*</span></label>
+							<input id="address" type="text" name="address" required />
+						</div>
+					</div>
+					<div class="double-input">
+						<div>
+							<label for="postcode">Postcode:<span>*</span></label>
+							<input id="postcode" type="text" name="postcode" required />
+						</div>
+						<div>
+							<div>
+								<label for="country">Country:</label>
+								<div class="select-wrapper">
+									<select name="" id="country">
+										<option value="lekki_phase1">Lekki Phase 1</option>
+										<option value="lekki_phase2">Lekki Phase 2</option>
+										<option value="ajah">Ajah</option>
+										<option value="oshodi">Oshodi</option>
+										<option value="festac">FESTAC</option>
+										<option value="mushin">Mushin</option>
+										<option value="surulere">Surulere</option>
+										<option value="obalende">Obalende</option>
+										<option value="cms">CMS</option>
+										<option value="idumota">Idumota</option>
+										<option value="ikeja">Ikeja</option>
+										<option value="egbeda">Egbeda</option>
+										<option value="shomolu">Shomolu</option>
+										<option value="oworonsoki">Oworonsoki</option>
+										<option value="berger">Berger</option>
+										<option value="igando">Igando</option>
+										<option value="ikotun">Ikotun</option>
+										<option value="iyanaipaja">Iyana Ipaja</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<h2 class="form-heading">Shipping Method</h2>
+
+					<div class="checkbox">
+			<!--			<label class="check" for="standard">Standard
+							<input id="standard" type="radio" name="shipping-method" value="standard" />
+							<span class="box"></span>
+						</label>
+					</div>
+					<div class="checkbox">
+						<label class="check" for="nextday">Next day
+							<input id="nextday" type="radio" name="shipping-method" value="nextday" />
+							<span class="box"></span>
+						</label>	-->
+
+						<label class="container">Standard
+							<input type="checkbox" checked="checked">
+							<span class="checkmark"></span>
+						  </label>
+						  
+						  <label class="container">Next Day
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+					</div>
+				</fieldset>
+				<button class="dispatch" type="submit">Submit</button>
+
+			</form>
+			<div class="bottom" id="social">
+				<a class="facebookBtn smGlobalBtn" href="#" ></a>
+				<a class="twitterBtn smGlobalBtn" href="#" ></a>
+				<a class="instagramBtn smGlobalBtn" href="#" ></a>
+				<div class="contact" >
+					<h3>Contact Us:</h3>
+					<p>57, Adebayo Mokuolu Street,</p>
+					<p>Anthony Village,</p>
+					<p>Anthony,</p>
+					<p>Lagos, Nigeria</p>
+					<p>+234-(0803)-664-7446</p>
+				<div>
+				<div class="bottom_menu">
+					<ul class="bottom_link">
+						<li><a href="">Home</a></li>
+						<li><a href="">Our Services</a></li>
+						<li><a href="">Our Routes & Charges</a></li>
+						<li><a href="">Contact Us</a></li>
+						<li><a href="">Become a Delivery Partner</a></li>
+					</ul>
+				</div>
+				<p class="p_artners">Our Partners</p>
+				<div class="partners">
+					<img src="/master.png" alt="" />
+					<img src="/thermocool.png" alt="" />
+					<img src="/tecno.png" alt="" />
+					<img src="/lg.png" alt="" />
+					<img src="/glologo.png" alt="" />
+					<img src="/cartoon.png" alt="" />
+					<img src="/airtellogo.png" alt="" />
+				</div>
+
+				<p class="designer">Site Design/Logo by <span>IT-Protocols</span></p>					
+			</div>
+		</footer>
+    </body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+         *{
+			margin: 0;
+			padding: 0;
+	}
+
+		body {
+          	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			margin: 0 auto;
+			background: hsl(0, 5%, 75%);;
+			}
+
+		header {
+          	align-items: center;
+          	display: flex;
+          	margin-bottom: px;
+			border-radius: 5px;
+			background:hsl(70, 10%, 90%);
+   			}
+			
+		header img{
+			width: 200px;
+			height: 200px;
+			border-right: 1px black solid ;
+			}
+
+		nav {
+          	margin-left: 0px;
+   			}
+			
+        nav,
+		ul	{
+			display: flex;
+			list-style: none;
+			}
+
+		nav,
+		a 	{
+			color: black;
+			display: inline-block;
+			padding: 5px 15px;
+			text-decoration: none;
+			}
+
+		nav
+		a:hover	{
+			border-bottom: 3px solid green;
+			color: rgb(16, 151, 16);
+			font-size:1.1em;
+            }
+
+        li#partner{
+			background: hsl(0, 6%, 61%);
+			padding: 3px;
+			margin-left: 20px;
+			font-weight: bold;
+			}
+
+		li#partner
+		a:hover{
+			background: white;
+			border: none;
+			}
+  
+        .breadcrumb {
+    		display:inline-flex;
+    		list-style: none;
+			margin: 5px 0 0 600px;
+  			}
+
+		.breadcrumb li {
+    		padding: 5px;
+			font-weight: bold;
+			}
+			  
+		.breadcrumb
+		#promo{
+			text-transform: uppercase;
+			}
+
+		.breadcrumb
+		#promo
+		a{
+			color: limegreen;
+			font-size: 20px;
+			}
+
+		.breadcrumb
+		#promo
+		a:hover{
+			font-size: 30px;
+			text-decoration: none;
+			}
+
+  		.breadcrumb li:after {
+    		/*content: '||';*/
+    		margin-left: 10px;
+  			}
+
+  		.breadcrumb li:last-child:after {
+    		content: '';
+ 			}
+
+		.breadcrumb a {
+    		color: black;
+    		text-decoration: none;
+  			}
+
+  		.breadcrumb a:hover {
+    		text-decoration: underline;
+        }
+
+        .register{
+            margin-left: 28%;
+            margin-bottom: 10px;
+        }
+
+            
+
+
+        .formbody {
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            position: relative;
+        }
+
+        b{
+        color:red;
+        }
+
+    /*#infopage {
+            ;
+    }*/
+
+    .wform {
+        width: 700px;
+        padding: 20px 20px; 
+        box-sizing: border-box; 
+        position: relative ; 
+        left: 25%; 
+        top: 10%; 
+    }
+    h3 {
+        margin-left: 48.5%;
+        color: #fff; 
+        font-weight: normal;
+
+    }
+
+    input {
+        width: 45%; 
+        background: none; 
+        border: 1px solid #fff; 
+        border-radius: 3px; 
+        padding: 6px 20px; 
+        box-sizing: border-box; 
+        margin-bottom: 15px;
+        font-family: 'Segoe UI', Tahoma, Verdana, sans-serif; 
+        font-size: 14px; 
+        color: black;
+    }
+	input:valid {
+        border: 2px solid green;
+    }
+
+    input:invalid {
+        border: 2px solid hotpink;
+    }
+
+    ::placeholder{
+        font-weight: normal;
+        color: black;
+    }
+
+    label{
+        font-weight: bolder;
+    }
+
+    button{
+        height: 40px;
+        overflow: hidden;
+        font-size: 14px;
+        padding-left:px;
+        width: 40%; 
+        border-radius: 5px;
+        font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+        background-color: darkgreen;
+        margin: 10px 0 10px 25%;
+
+    }
+
+    button:hover {
+        background-color: green;
+        font-weight: bolder;
+        border: 1px #fff solid;
+        color: #fff;
+        box-shadow: 1px 1px 11px #330033;
+        cursor: pointer;
+    }
+
+    .login{
+        font-size: 14px;
+        margin-left: 28%;
+		font-weight: normal;
+    }
+
+	.login
+	a{
+		font-weight: bold;
+
+	}
+
+	.login
+	a:hover{
+		color: green;
+	}
+
+    </style>
+    
+	<title>Sign Up Form</title>
+	<meta charset="utf-8" name="viewport" content=""/>
+	<link href="wakandaform.css" rel="stylesheet" type="text/css">
+
+
+</head>
+	<body>
+        <header>
+            <img src="/green_eagle_icon.svg" alt=""/>
+            <nav>
+                <ul>
+                    <li><a href="/storeHome.html">Home</a></li>
+                    <li><a href="">Our Services</a></li>
+                    <li><a href="/storeHome.html#delivery_request">Our Routes & Charges</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="/storeHome.html#itemtrack">Track Your Items</a></li>
+                    <li id="partner"><a href="" target="_blank">Promos!</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <section>
+            <ol class="breadcrumb">
+                <li id="hour">MON - SAT: 8AM - 6PM</li>
+                <li id="call">CALL: +234-0803-411-9208</li>
+            </ol>
+	
+		<div class="formbody">
+			<form class="wform" id="gform" ;>
+				<div>
+                    <h2 class="register">Register as a Partner</h2>
+					<div>
+					<label><span></span></label>
+							<input id="surname" type="text" name="inputfield" placeholder="* Enter your Surname" required/>
+					<label><span></span></label>
+							<input type="text" name="inputfield" placeholder="* Enter your First Name" required/>
+					</div>
+				</div>						
+				<div>
+					<div>
+					<label><span></span></label>
+							<input type="email" name="inputfield" placeholder="* Enter your Email address" required/>
+					<label><span></span></label>
+							<input type="telephone" name="inputfield" placeholder="* Enter your mobile number" required/>
+					</div>
+                </div>
+                <div>
+					<div>
+					<label><span></span></label>
+							<input type="password" name="inputfield" placeholder="* Enter Password" required/>
+					<label><span></span></label>
+							<input type="password" name="inputfield" placeholder="* Confirm Password" required/>
+					</div>
+				</div>		
+		
+                    <button id="btn" type="submit" style="cursor: pointer">Sign Up!</button>
+                    <h4 class="login">Already have an Account? <a href="/signUpForm.html">Login</a></h4>
+
+			</form>			
+					
+		</div>
+	</body>
+	<script src="wakandaform.js" type="text/javascript"></script>
+
+
+</html>

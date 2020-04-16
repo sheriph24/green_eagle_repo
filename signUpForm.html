@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <title>Signup form</title>
+  <style>
+    
+    *{
+			margin: 0;
+			padding: 0;
+	}
+
+		body {
+          	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			margin: 0 auto;
+			background: hsl(0, 5%, 75%);;
+			}
+
+		header {
+          	align-items: center;
+          	display: flex;
+          	margin-bottom: px;
+			border-radius: 5px;
+			background:hsl(70, 10%, 90%);
+   			}
+			
+		header img{
+			width: 200px;
+			height: 200px;
+			border-right: 1px black solid ;
+			}
+
+		nav {
+          	margin-left: 0px;
+   			}
+			
+		a   {
+			padding: 0;
+            }
+
+        nav,
+		ul	{
+			display: flex;
+			list-style: none;
+			}
+
+		nav,
+		a 	{
+			color: black;
+			display: inline-block;
+			padding: 5px 15px;
+			text-decoration: none;
+			}
+
+		nav
+		a:hover	{
+			border-bottom: 3px solid green;
+			color: rgb(16, 151, 16);
+			font-size:1.1em;
+            }
+
+        li#partner{
+			background: hsl(0, 6%, 61%);
+			padding: 3px;
+			margin-left: 20px;
+			font-weight: bold;
+			}
+
+		li#partner
+		a:hover{
+			background: white;
+			border: none;
+			}
+  
+        .breadcrumb {
+    		display:inline-flex;
+    		list-style: none;
+			margin: 5px 0 0 600px;
+  			}
+
+		.breadcrumb li {
+    		padding: 5px;
+			font-weight: bold;
+			}
+			  
+		.breadcrumb
+		#promo{
+			text-transform: uppercase;
+			}
+
+		.breadcrumb
+		#promo
+		a{
+			color: limegreen;
+			font-size: 20px;
+			}
+
+		.breadcrumb
+		#promo
+		a:hover{
+			font-size: 30px;
+			text-decoration: none;
+			}
+
+  		.breadcrumb li:after {
+    		/*content: '||';*/
+    		margin-left: 10px;
+  			}
+
+  		.breadcrumb li:last-child:after {
+    		content: '';
+ 			}
+
+		.breadcrumb a {
+    		color: black;
+    		text-decoration: none;
+  			}
+
+  			.breadcrumb a:hover {
+    			text-decoration: underline;
+			}
+
+
+    body {
+        font-family:'Segoe UI', Tahoma, Verdana, sans-serif
+    }
+
+    fieldset {
+        padding-left: 300px;
+        border: none;
+        
+    }
+    fieldset>div {
+        margin-bottom:30px;
+    }
+
+    .image{
+        width: 300px;
+        height: 340px;
+        float: left;
+        margin-right: 20px;
+    }
+
+    .login{
+        float: left;
+    }
+
+    #password
+    label{
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    #email
+    label{
+        font-size: 14px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    label span {
+        color: red;
+    }
+
+    input {
+        padding: 10px;
+        width: 250px;
+        border-radius: 5px;
+    }
+
+    input:valid {
+        border: 2px solid green;
+    }
+
+    input:invalid {
+        border: 2px solid hotpink;
+    }
+
+    .checkbox input {
+        float: left;
+        margin-right: 10px;
+        width: auto;
+    }
+    .register
+    p{
+        font-size: 14px;
+    }
+
+    .register
+    p
+    a{
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .register
+    p
+    a:hover{
+        color: rgb(7, 150, 7);
+    }
+
+    button {
+        background: green;
+        font-size: 14px;
+        border: 0;
+        width: 224px;
+        padding: 10px 0;
+        margin-top: 15px;
+        margin-left: 25px;
+        border-radius: 5px;
+
+        }
+    button:hover {
+        background-color: green;
+        font-weight: bold;
+        border: 1px #fff solid;
+        color: #fff;
+        box-shadow: 1px 1px 11px #330033;
+        cursor: pointer;
+    }
+  </style>
+  </head>
+<body>
+    <header>
+        <img src="/green_eagle_icon.svg" alt=""/>
+        <nav>
+            <ul>
+                <li><a href="storeHome.html">Home</a></li>
+                <li><a href="">Our Services</a></li>
+                <li><a href="/storeHome.html#delivery_request">Our Routes & Charges</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="/storeHome.html#itemtrack">Track Your Items</a></li>
+                <li id="partner"><a href="" target="_blank">Promos!</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <ol class="breadcrumb">
+            <li id="hour">MON - SAT: 8AM - 6PM</li>
+            <li id="call">CALL: +234-0803-411-9208</li>
+        </ol>
+
+        <form action="url_to_send_form_data" method="post">
+            <fieldset>
+                <div class="image_container">
+                    <img class="image" src="/dmaskdelivery2.png" />
+                </div>
+                <div class="header">
+                    <h2>Enter your Login Details</h2>
+                </div>
+                <div class="login">
+                    <div id="email">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" name="email" required />
+                    </div>
+                    <div id="password">
+                        <label for="password">Password</label>
+                        <input id="password" type="password" name="password" required />
+                    </div>
+                    <button type="submit">Continue</button>
+                    <div class="register">
+                        <p>You don't have an Account with us? <a href="/signUpform2.html">Register</a></p>
+                    </div>        
+                </div>
+            </fieldset>
+          </form>
+        
+    </section>
+
+</body>
+</html>

@@ -58,15 +58,6 @@
 				margin-left: 40px;
 			}
 
-			/*.product-cards button{
-				background:none;
-				border-radius: 20px;
-				margin: 40% 0 30% 120%;
-				color: black;
-				border: 1px solid black;
-			}*/
-
-
 			nav
 			ul	{
 				list-style: none;
@@ -144,7 +135,6 @@
 				position: relative;
 				border-radius: 5px;
 				font-size: 18px;
-				border: 1px solid blue;
 				margin-bottom: 80px;
 			}
 		
@@ -311,42 +301,6 @@
   			transform: rotate(45deg);
 			}
 
-			/*.product-card{
-				display: inline-block;
-				border: 1px solid black;
-				padding: px;
-				margin-left: 20px;
-				width: 320px;
-			}
-
-			.product-card img {
-				width: 320px;
-				border: ;
-				height: ;
-			}
-			
-			.product-card h3 {
-				margin: 30px 0 15px;
-			}
-
-			.product-card a {
-				color: black;
-				text-decoration: none;
-			}
-
-			.product-card p{
-				line-height: 1.5;
-			}
-
-
-			.current span{
-				font-weight: bold;
-				text-decoration: underline;
-			}
-
-			#less {
-				padding-top: 25px;
-			}*/
 
 			fieldset{
 				border: 0;
@@ -378,8 +332,10 @@
 
 			.select-wrapper {
   				position: relative;
-  				width: 222px;
+  				width: 500px;
 				margin-bottom: 0;
+				border: 1px solid yellow;
+				border-radius: 4px;
 			}
 
 			.select-wrapper:after {
@@ -394,8 +350,8 @@
   				Z-index: -1;
 			}
 
-			.single-input input{
-				width: 87%;
+			.single-input{
+				display: flex;
 			}
 
 			.double-input {
@@ -571,58 +527,6 @@
 			}
 
 
-
-
-			/*input:valid
-			 {
-  				
-			}
-
-			input:invalid
-			 {
-  				
-			}
-
-	    	header,
-	    	nav,
-	    	section,
-	    	footer {
-	        	background: #659494;
-            	border-radius: 5px;
-   	        	color: white;
- 	        	font-family: arial, san-serif;
- 	        	font-size: 25px;
-	        	text-align: center;
-	    	}
-
-	    	footer:before {
-          		content: '<';
-            }
-
-	    	footer:after {
-				content: '>';
-            }
-
-	    	header,
-	    	nav,
-	    	section,
-	    	footer {
- 	        	border: 1px solid gray;
-     	    	padding: 20px;
- 	        	margin-bottom: 25px;
-	    	}
-
-	    	.products {
-	        	display: grid;
-	        	grid-template-columns: auto auto auto auto;
-	    	}
-
-	    	.products div {
-	        	border: 2px solid white;
- 	        	padding: 30px;
-	        	margin: 10px;
-	    	} */
-
         </style>
     </head>
     <body>
@@ -727,70 +631,54 @@
 							<input id="last_name" type="text" name="lasttname" required>
 						</div>
 					</div>
-					<div class="single-input">
+					<div class="double-input">
 						<div>
 							<label for="address">Address:<span>*</span></label>
 							<input id="address" type="text" name="address" required />
 						</div>
-					</div>
-					<div class="double-input">
 						<div>
 							<label for="postcode">Postcode:<span>*</span></label>
 							<input id="postcode" type="text" name="postcode" required />
 						</div>
-						<div>
-							<div>
-								<label for="country">Country:</label>
-								<div class="select-wrapper">
-									<select name="" id="country">
-										<option value="lekki_phase1">Lekki Phase 1</option>
-										<option value="lekki_phase2">Lekki Phase 2</option>
-										<option value="ajah">Ajah</option>
-										<option value="oshodi">Oshodi</option>
-										<option value="festac">FESTAC</option>
-										<option value="mushin">Mushin</option>
-										<option value="surulere">Surulere</option>
-										<option value="obalende">Obalende</option>
-										<option value="cms">CMS</option>
-										<option value="idumota">Idumota</option>
-										<option value="ikeja" selected>Ikeja</option>
-										<option value="egbeda">Egbeda</option>
-										<option value="shomolu">Shomolu</option>
-										<option value="oworonsoki">Oworonsoki</option>
-										<option value="berger">Berger</option>
-										<option value="igando">Igando</option>
-										<option value="ikotun">Ikotun</option>
-										<option value="iyanaipaja">Iyana Ipaja</option>
-									</select>
-								</div>
+					</div>
+					<div>
+						<label for="country">Destination:</label>
+							<div class="select-wrapper">
+								<select name="" id="country">
+									<option value="lekki_phase1">Lekki Phase 1</option>
+									<option value="lekki_phase2">Lekki Phase 2</option>
+									<option value="ajah">Ajah</option>
+									<option value="oshodi">Oshodi</option>
+									<option value="festac">FESTAC</option>
+									<option value="mushin">Mushin</option>
+									<option value="surulere">Surulere</option>
+									<option value="obalende">Obalende</option>
+									<option value="cms">CMS</option>
+									<option value="idumota">Idumota</option>
+									<option value="ikeja" selected>Ikeja</option>
+									<option value="egbeda">Egbeda</option>
+									<option value="shomolu">Shomolu</option>
+									<option value="oworonsoki">Oworonsoki</option>
+									<option value="berger">Berger</option>
+									<option value="igando">Igando</option>
+									<option value="ikotun">Ikotun</option>
+									<option value="iyanaipaja">Iyana Ipaja</option>
+								</select>
 							</div>
-						</div>
+							<h2 class="form-heading">Shipping Method</h2>
+							<div class="checkbox">
+								<label class="container">Standard
+									<input type="checkbox" checked="checked">
+									<span class="checkmark"></span>
+								  </label>
+								  
+								  <label class="container">Next Day
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							</div>		
 					</div>
 
-					<h2 class="form-heading">Shipping Method</h2>
-
-					<div class="checkbox">
-			<!--			<label class="check" for="standard">Standard
-							<input id="standard" type="radio" name="shipping-method" value="standard" />
-							<span class="box"></span>
-						</label>
-					</div>
-					<div class="checkbox">
-						<label class="check" for="nextday">Next day
-							<input id="nextday" type="radio" name="shipping-method" value="nextday" />
-							<span class="box"></span>
-						</label>	-->
-
-						<label class="container">Standard
-							<input type="checkbox" checked="checked">
-							<span class="checkmark"></span>
-						  </label>
-						  
-						  <label class="container">Next Day
-							<input type="checkbox">
-							<span class="checkmark"></span>
-						</label>
-					</div>
 				</fieldset>
 				<button class="dispatch" type="submit">Submit</button>
 
